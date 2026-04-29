@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#f3e6e0",
+                    "tertiary": "#00676c",
+                    "tertiary-fixed": "#a0f0f6",
+                    "on-tertiary-container": "#f6ffff",
+                    "surface": "#fff8f5",
+                    "surface-container": "#f9ebe5",
+                    "secondary-fixed-dim": "#b9cbba",
+                    "on-secondary-fixed": "#101f14",
+                    "on-error": "#ffffff",
+                    "on-background": "#211a17",
+                    "on-secondary-container": "#566759",
+                    "surface-container-highest": "#ede0da",
+                    "surface-container-low": "#fff1eb",
+                    "primary-fixed": "#ffdbc9",
+                    "surface-dim": "#e4d7d2",
+                    "surface-tint": "#8a4f29",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "on-surface-variant": "#53443c",
+                    "on-primary-fixed": "#321200",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#84d3da",
+                    "on-secondary-fixed-variant": "#3a4b3e",
+                    "surface-variant": "#ede0da",
+                    "on-primary-container": "#fffcff",
+                    "primary-container": "#a5653d",
+                    "inverse-on-surface": "#fceee8",
+                    "background": "#fff8f5",
+                    "secondary-container": "#d2e5d3",
+                    "secondary": "#526255",
+                    "outline": "#85736a",
+                    "primary": "#884d27",
+                    "surface-bright": "#fff8f5",
+                    "on-surface": "#211a17",
+                    "inverse-primary": "#ffb68c",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#2b8086",
+                    "outline-variant": "#d8c2b8",
+                    "secondary-fixed": "#d5e7d6",
+                    "inverse-surface": "#362f2b",
+                    "primary-fixed-dim": "#ffb68c",
+                    "on-primary-fixed-variant": "#6e3914",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#002022",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "stack-xl": "80px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "margin": "40px",
+                    "stack-xs": "4px"
+            },
+            "fontFamily": {
+                    "h2": ["Noto Serif"],
+                    "label-caps": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "h3": ["Noto Serif"],
+                    "h1": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-divider {
+            border-bottom: 2px dotted #526255; /* Moss Green from design system context */
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-stone-50/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-stone-200/50">
+<div class="flex justify-between items-center px-10 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif text-orange-900 tracking-tighter">Babylonia</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Home</a>
+<a class="font-serif tracking-wide text-sm uppercase text-orange-700 border-b border-orange-700 pb-1" href="#">Menu</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Reservations</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Events</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Gallery</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Profile</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-32 pb-16 px-margin max-w-container-max mx-auto text-center">
+<h1 class="font-h1 text-h1 text-primary mb-stack-sm uppercase tracking-tighter">Culinary Sanctuary</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto italic">A curated selection of heritage flavors and contemporary spirits, served under the celestial canopy of Babylonia.</p>
+</header>
+<!-- Filters & Categories -->
+<section class="sticky top-[88px] z-40 bg-background/95 backdrop-blur-sm border-y border-outline-variant/30 py-6 mb-stack-lg">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<!-- Main Categories -->
+<div class="flex space-x-gutter overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+<button class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 whitespace-nowrap">FOOD</button>
+<button class="font-label-caps text-label-caps text-outline hover:text-primary transition-colors pb-1 whitespace-nowrap">COCKTAILS</button>
+<button class="font-label-caps text-label-caps text-outline hover:text-primary transition-colors pb-1 whitespace-nowrap">BAR BITES</button>
+<button class="font-label-caps text-label-caps text-outline hover:text-primary transition-colors pb-1 whitespace-nowrap">MAINS</button>
+<button class="font-label-caps text-label-caps text-outline hover:text-primary transition-colors pb-1 whitespace-nowrap">DESSERTS</button>
+</div>
+<!-- Secondary Filters -->
+<div class="flex space-x-stack-sm items-center">
+<span class="material-symbols-outlined text-outline text-lg">filter_list</span>
+<select class="bg-transparent border-none font-label-caps text-[10px] text-on-surface focus:ring-0 uppercase tracking-widest cursor-pointer">
+<option>ALL CUISINES</option>
+<option>CONTINENTAL</option>
+<option>ASIAN</option>
+<option>MEDITERRANEAN</option>
+</select>
+<div class="h-4 w-px bg-outline-variant"></div>
+<select class="bg-transparent border-none font-label-caps text-[10px] text-on-surface focus:ring-0 uppercase tracking-widest cursor-pointer">
+<option>DIETARY PREFERENCES</option>
+<option>VEGETARIAN</option>
+<option>VEGAN</option>
+<option>GLUTEN-FREE</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Grid -->
+<main class="max-w-container-max mx-auto px-margin mb-stack-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item Card 1 -->
+<div class="group bg-surface-container-low border border-outline-variant/10 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Gourmet salad with fresh arugula, figs, and toasted walnuts on a Soft Stone ceramic plate, warm dusk lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs7ZSt4hDbv8UqF9ZWHuAeYLsk114jAQbYH0diovOI7I9b4TyjQWCwZhkL2L7-9QVHCPvY862n7tBKZetZDN72ozDams__bbG7lwVFdM_96kfwu688xn7EERB0v9h5dcxhlIz-f8WL1VIGqGd0z2sZoNasdUGKwUsHuLvPNDVD_Gkpx66Tu0Dkr8r5--HiZWS9nsCJTKa2aSxRijLpNoYsRN8mxFCLOsRjefsqHozQ3gNPm_OCH3tB0EgbCbFUdxylyNqSqWq5pOIh"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<span class="bg-primary text-ivory px-3 py-1 font-label-caps text-[10px] text-on-primary">BESTSELLER</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 font-label-caps text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> VEG
+                        </span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Ancient Fig &amp; Walnut Salad</h3>
+<span class="font-h3 text-h3 text-primary-container">$24</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md leading-relaxed">Wild arugula, honey-roasted heritage figs, balsamic glaze, and hand-crushed toasted walnuts.</p>
+<div class="dotted-divider mb-stack-sm"></div>
+<div class="flex items-center gap-2 text-secondary text-sm">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Mediterranean Heritage</span>
+</div>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="group bg-surface-container-low border border-outline-variant/10 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegantly plated sea bass with saffron foam and microgreens on a warm white background, minimal editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCpA3qYSnQRdBakLAgP_KFR3H-FtOThIRG3lkvalPNMgDJX-FMtK5Ls8wXblEuVMTzLu7bU5XK8RdRuwfrPPeQqWMNHE1mJSvB_w6v_RILPIZOwvdlm8cnRLbeGrLnO7a8NkiiKXXR36Jwn6UJr3MXtdpUQX_RkGkeAnYsu516LGPNT9TsSeI_V_i39XCAasWZBK1vVdbIvJlgeAgwTpzckA_wPItehIEaa0lQTvi1VS4q38WrNOZNlSaKpnUkBh6z_DmuZI7gVqpQ"/>
+<div class="absolute top-4 right-4">
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 font-label-caps text-[10px] flex items-center gap-1">
+                             NON-VEG
+                        </span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Saffron Infused Sea Bass</h3>
+<span class="font-h3 text-h3 text-primary-container">$42</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md leading-relaxed">Pan-seared Chilean sea bass rested on a bed of herb-infused risotto with Persian saffron foam.</p>
+<div class="dotted-divider mb-stack-sm"></div>
+<div class="flex items-center gap-2 text-secondary text-sm">
+<span class="material-symbols-outlined text-[16px]">wine_bar</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Continental Luxe</span>
+</div>
+</div>
+</div>
+<!-- Item Card 3 -->
+<div class="group bg-surface-container-low border border-outline-variant/10 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisanal cocktail in a crystal coup glass with a dried orange garnish and smoke effect, dark marble background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBls-IcWHWPyo_0JANbGp_OKSKmgbx_Y355v4KStIVFKfww0T6xb8swKANw_pAM7zamOGXizxbjCvqtKd90sc8y8YeHgsy3dHZsQl0abz88TO-Tj0O_af71VPUzBIot4aN9Zv5I1gyssGvM5EORJvPXiHI-_xeDrPxok6wUWtQBXRI3sMgvGGQyCeVfkHD67UYtjw9wUd3H9ER0mkhTpMHF_duElP4ClaJ75G_t-XCX1A9yDXRiY5LbKfo-xVA0xMAi370-t2uvGzS2"/>
+<div class="absolute top-4 right-4">
+<span class="bg-primary text-ivory px-3 py-1 font-label-caps text-[10px] text-on-primary">BESTSELLER</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Midnight in Babylon</h3>
+<span class="font-h3 text-h3 text-primary-container">$19</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md leading-relaxed">Smoked bourbon, homemade date syrup, aromatic bitters, and a touch of charred cinnamon.</p>
+<div class="dotted-divider mb-stack-sm"></div>
+<div class="flex items-center gap-2 text-secondary text-sm">
+<span class="material-symbols-outlined text-[16px]">local_bar</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Signature Spirit</span>
+</div>
+</div>
+</div>
+<!-- Item Card 4 -->
+<div class="group bg-surface-container-low border border-outline-variant/10 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Truffle mushroom pasta in a deep stone bowl with shaved parmesan, warm earthy lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuEDphbq8lrgR2-kqSixVsqIFUAii-PH39lenPlZkJVzMBRJa_0bZECUV9cywkcbAH_dCrpFzG589gb4UawFlw1u-1wGizBA-dfcujxnOm73HZJ0tL-zNHdcTCWqEfEE5Ky7v1sDH6HlQNKeIZ6ri5c4VZNhe8dOxUlB6q9AaAgj-XwCcQYZCLpc44OuTegYzLJI8UYFtEBCA04uw4IFFxOFvF4SrY-PQwGfRpsvaedQKgepHfohxCEL9leDTtm-zvAGw38x0qWauk"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 font-label-caps text-[10px] flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> VEG
+                        </span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Truffle Forest Tagliatelle</h3>
+<span class="font-h3 text-h3 text-primary-container">$34</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md leading-relaxed">Handmade pasta tossed in black truffle cream with wild foraged mushrooms and 24-month aged parmesan.</p>
+<div class="dotted-divider mb-stack-sm"></div>
+<div class="flex items-center gap-2 text-secondary text-sm">
+<span class="material-symbols-outlined text-[16px]">flatware</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Italian Sophistication</span>
+</div>
+</div>
+</div>
+<!-- Item Card 5 -->
+<div class="group bg-surface-container-low border border-outline-variant/10 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Miso glazed lamb chops with sesame seeds and micro-herbs on a dark ceramic platter, moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBkzQm8qDYgaIif8phKtVwIzY0-Vzmee2ozXMxf1oZBb76L5XPlFwapMrvaDYYohX1lBgImRjIHFflWob8eUvJbNZLA8n28OBDvK0fEo2fA3rUAMPaKzpKA2vn-Vj0SZim2Xh0ZZpnwmnIkf3c3hXI5tHXOFFxxNHYobM8KwB2p_UmfhPxL-MeKs2dS-V_UuqOXbrfL1BspgC1Ju679eXcMulKArnEM4nKw4vNfPEaduQhvDIfmxpF_6e5lLDhRmMNwDs5lFthH8GK"/>
+<div class="absolute top-4 right-4">
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 font-label-caps text-[10px] flex items-center gap-1">
+                             NON-VEG
+                        </span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Miso Glazed Lamb Chops</h3>
+<span class="font-h3 text-h3 text-primary-container">$48</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md leading-relaxed">Three-bone lamb rack marinated in white miso and ginger, served with a charred bok choy base.</p>
+<div class="dotted-divider mb-stack-sm"></div>
+<div class="flex items-center gap-2 text-secondary text-sm">
+<span class="material-symbols-outlined text-[16px]">ramen_dining</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Asian Fusion</span>
+</div>
+</div>
+</div>
+<!-- Item Card 6 -->
+<div class="group bg-surface-container-low border border-outline-variant/10 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Deep chocolate lava cake with gold leaf and raspberry coulis on an Ivory plate, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzUK8quVqZQZfO9xMntMwxrrUDo460PyJIDS0Eq3WZpHNh-ZZ3Wh9dyxfTSpNQdCButeHlszxB8yVpEHRL7rvZurm7UTFF64oOABc1kVost4jP7Okr_1UAZIa6aCCxSHzuZFEDwc86Wf34TYvSQx6rToYuxSAbmHpLzaj0rVo_8JeC-f5IN_nuYTaDzEL9dLRVa9W_IHamnCnJqJGEoZrZSMcTI6sgBSd-kfl4QgMb7d4FRpuTs2ABpUEmv8_NdX6I9dvhqnKmNI3Y"/>
+<div class="absolute top-4 right-4">
+<span class="bg-primary text-ivory px-3 py-1 font-label-caps text-[10px] text-on-primary">BESTSELLER</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-h3 text-on-background">Gilded Cocoa Lava</h3>
+<span class="font-h3 text-h3 text-primary-container">$16</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md leading-relaxed">70% dark Belgian chocolate heart, edible 24k gold leaf, and a tart wild raspberry reduction.</p>
+<div class="dotted-divider mb-stack-sm"></div>
+<div class="flex items-center gap-2 text-secondary text-sm">
+<span class="material-symbols-outlined text-[16px]">icecream</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest">Artisan Dessert</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Recommended Pairings (Asymmetric Bento Style) -->
+<section class="bg-surface-container py-stack-xl">
+<div class="max-w-container-max mx-auto px-margin">
+<h2 class="font-h2 text-h2 text-primary mb-stack-lg text-center uppercase tracking-widest">Curated Pairings</h2>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Pairing 1 -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-stack-lg border border-outline-variant/20 flex flex-col md:flex-row gap-stack-md items-center">
+<div class="w-full md:w-1/2">
+<img class="w-full h-64 object-cover" data-alt="Champagne bottle in ice bucket next to fresh oysters on a silver platter, bright airy rooftop atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_kK_Q654AIpdifOiXtTC-Z7gSmm-XSeuv1x4Q_eqifXqMrQ_2WRgCk5KmFh4_vi51oeHxVRd0SzwAngKF66qOb9Nc3c-pMKISzz9DRlziRgXNguiYHc-lNaP08F7GMFMwIVziQMwqQ63qxXqIH5EnzamCLaIJTcC7kB_OAe9MlzlW5Wl3ExjqyIH0mYdNqwuci7LbJ_p9nVEycbR8i29SL-jqMg5aE4uWoJbqwrSbFRty08NOBpjjOkzbiHZqNQx_wa4UUzE2u2XV"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-caps text-[10px] text-primary tracking-[0.3em] uppercase block mb-2">The Sunset Ritual</span>
+<h3 class="font-h3 text-h3 text-on-background mb-stack-sm">Oysters &amp; Perrier-Jouët</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Freshly shucked Atlantic oysters served with a shallot mignonette, paired perfectly with the crisp floral notes of Grand Brut.</p>
+<button class="bg-primary text-on-primary px-stack-md py-stack-xs font-label-caps text-[11px] tracking-widest hover:opacity-90 transition-opacity">EXPERIENCE $120</button>
+</div>
+</div>
+<!-- Pairing 2 -->
+<div class="lg:col-span-5 bg-surface-container-high p-stack-lg border border-outline-variant/20 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">auto_awesome</span>
+<h3 class="font-h3 text-h3 text-on-background mb-stack-sm">Sommelier's Secret</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md italic">"The richness of our Miso Lamb is balanced exquisitely by the tannins of a vintage Malbec."</p>
+<div class="dotted-divider w-24 mx-auto mb-stack-md"></div>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Ask for Julian</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-200 border-t border-stone-300">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-20 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col space-y-4">
+<span class="text-xl font-serif text-stone-900">Babylonia</span>
+<p class="font-serif text-base font-light text-stone-600">Elevated heritage on the city's edge.</p>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-serif font-semibold text-stone-900 mb-2">Explore</h4>
+<a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400" href="#">Location</a>
+<a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400" href="#">Hours</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-serif font-semibold text-stone-900 mb-2">Connect</h4>
+<a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400" href="#">Instagram</a>
+<a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400" href="#">Facebook</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-serif font-semibold text-stone-900 mb-2">Access</h4>
+<a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400" href="#">Member Login</a>
+</div>
+</div>
+<div class="px-20 py-8 border-t border-stone-300/50 text-center">
+<p class="font-serif text-sm text-stone-500">© 2024 Babylonia Rooftop. All rights reserved.</p>
+</div>
+</footer>
+<!-- FAB: Only for Home/Dash context, but requested for menu? Typically suppressed on details, keeping minimalist here -->
+<button class="fixed bottom-10 right-10 bg-primary text-on-primary w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform md:hidden">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</body></html>

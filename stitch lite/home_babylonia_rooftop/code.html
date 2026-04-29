@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#f3e6e0",
+                    "tertiary": "#00676c",
+                    "tertiary-fixed": "#a0f0f6",
+                    "on-tertiary-container": "#f6ffff",
+                    "surface": "#fff8f5",
+                    "surface-container": "#f9ebe5",
+                    "secondary-fixed-dim": "#b9cbba",
+                    "on-secondary-fixed": "#101f14",
+                    "on-error": "#ffffff",
+                    "on-background": "#211a17",
+                    "on-secondary-container": "#566759",
+                    "surface-container-highest": "#ede0da",
+                    "surface-container-low": "#fff1eb",
+                    "primary-fixed": "#ffdbc9",
+                    "surface-dim": "#e4d7d2",
+                    "surface-tint": "#8a4f29",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "on-surface-variant": "#53443c",
+                    "on-primary-fixed": "#321200",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#84d3da",
+                    "on-secondary-fixed-variant": "#3a4b3e",
+                    "surface-variant": "#ede0da",
+                    "on-primary-container": "#fffcff",
+                    "primary-container": "#a5653d",
+                    "inverse-on-surface": "#fceee8",
+                    "background": "#fff8f5",
+                    "secondary-container": "#d2e5d3",
+                    "secondary": "#526255",
+                    "outline": "#85736a",
+                    "primary": "#884d27",
+                    "surface-bright": "#fff8f5",
+                    "on-surface": "#211a17",
+                    "inverse-primary": "#ffb68c",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#2b8086",
+                    "outline-variant": "#d8c2b8",
+                    "secondary-fixed": "#d5e7d6",
+                    "inverse-surface": "#362f2b",
+                    "primary-fixed-dim": "#ffb68c",
+                    "on-primary-fixed-variant": "#6e3914",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#002022",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "stack-xl": "80px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "margin": "40px",
+                    "stack-xs": "4px"
+            },
+            "fontFamily": {
+                    "h2": ["Noto Serif"],
+                    "label-caps": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "h3": ["Noto Serif"],
+                    "h1": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F9F7F2; /* Warm Ivory from Brand Book */
+        }
+        .soft-stone {
+            background-color: #E8E4DB;
+        }
+        .menu-dotted-line {
+            border-bottom: 1px dotted #526255; /* Moss Green from design system context */
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 border-b border-stone-200/50 bg-stone-50/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-10 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif text-orange-900 tracking-tighter">Babylonia</div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-8">
+<a class="font-serif tracking-wide text-sm uppercase text-orange-700 border-b border-orange-700 pb-1 hover:text-orange-800 transition-colors duration-300" href="#">Home</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Menu</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Reservations</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Events</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Gallery</a>
+<a class="font-serif tracking-wide text-sm uppercase text-stone-600 hover:text-orange-800 transition-colors duration-300" href="#">Profile</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Babylonia Hero Backdrop" class="w-full h-full object-cover opacity-30" data-alt="Cinematic wide shot of a luxury rooftop lounge at dusk with golden warm ambient lighting and soft blurred cityscape background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcpkS-zy8pWZlmpxQPneG6E4Sl25pbgc6VFqb4c5Gwg9hCSynd-vYmkJNSHu3UM-KAt6yi8UyxMYTI4UrhQWotUjKg1kqeGXUit6y-L2ZjjbCMWBV6Uom8a3woe5RlQA9Wy2d4o_ifE5CTTkx-hn2nfMf2GryMKH2YxaIsZe8rTC9KXZLXGRozgeByB0p17703lkyslpeRkDaEyRwyWdsd4qP4hGDznn8KBBZ0zhxByaItCET9UvVcgndpWB3vrtQoe9lGp_SdOjPt"/>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin flex flex-col items-center">
+<div class="mb-stack-lg animate-fade-in">
+<img alt="Babylonia Logo" class="h-32 md:h-48 object-contain" data-alt="Elegant minimalist logo of Babylonia Rooftop with clean serif typography in a deep espresso color on transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDByyzfCDvIgRbeEkt75kAaUeDg2E1xIKHz7Bz2G2n6pO3nx9-OKTeH3cutht2ap3dRM5dCCiFi3gGfLnY2vidP7TK38I27PGWONufxbVPl1nTxn0HOoOuWE-02MHBDRP15IpjUQ7Zp2oh52rR0iksPTUOqgAMXYUYbeWwmlmMUd51JoUaXRpjd2l9ic2nhPg-QSe24u-bKvA3Hx0ntj3vQJYY0kq7CpOabAlQ8uX1E1En7bBrpRJqT0ERpC-CIPHslTBDAg1_wWw8j"/>
+</div>
+<h1 class="font-h1 text-h1 text-primary mb-stack-md">Elevated Heritage</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                Experience the atmosphere of a sun-drenched rooftop lounge at dusk. Impeccably polished global cuisine served under the shifting canopy of the sky.
+            </p>
+<div class="flex flex-col sm:flex-row gap-gutter">
+<button class="bg-primary text-on-primary px-8 py-4 font-label-caps uppercase tracking-widest hover:opacity-90 transition-all rounded-DEFAULT">
+                    Reserve Table
+                </button>
+<button class="border border-primary text-primary px-8 py-4 font-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all rounded-DEFAULT">
+                    Explore Menu
+                </button>
+</div>
+</div>
+<div class="mt-stack-xl relative w-full max-w-6xl px-margin">
+<div class="aspect-[21/9] overflow-hidden rounded-lg shadow-xl border border-outline-variant/20">
+<img alt="Mood Imagery" class="w-full h-full object-cover" data-alt="Top-down artistic shot of curated cocktails and gourmet small plates on a textured stone table with dramatic afternoon shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjb7fmtWUrmzO5p35qxQMs3gmtjhA-tY6ZwLPRiVDujJ7Wo1fLJyDVp7KflXzQkGfrcO1u5Rd-dHGxnBAwbuVDw_ABcV9cttB9f-XwUUxVYx3YnjIuxGyDvXWYsRjGNvEAw3VL652lKi3nSQGWr8ePk_3_MrUF_7tiO5B7ZCTFGEqzr-nVj7vXVWzwpnKtiNkjTsKIltTZtnSDjW0AmpoLCz6j0NAjega34tHW7gaF-LNni2jC_XVOKkqjMVYvTsyD3RFoZ1n0l_jg"/>
+</div>
+</div>
+</header>
+<!-- Global Cuisine Section -->
+<section class="py-stack-xl bg-background">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="text-center mb-stack-xl">
+<span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-stack-xs">Culinary Journey</span>
+<h2 class="font-h2 text-h2 text-on-background">Global Flavors, Elevated</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Continental -->
+<div class="group flex flex-col space-y-stack-md">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Continental Cuisine" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Sophisticated plate of herb-crusted lamb rack with roasted root vegetables and a rich reduction sauce, fine dining lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7A6xpZxmqhR7gLveqVAqGgR5YTN8yH2qPusxh5cvwnJOA8pIigV5ptDJdewMXq4juh3qR6p5l7iNgBFwR75DmXLI4fJWxCArJSjMy4e51L33MQWKTZjyHbiYfDWqKoyl713XMGNQLF85jk8c256rsUXcOolTyqyhQw6diybQ0kJKuIlfoSpS4vsUd16ow2BwHMrwCXG9hF0hEzKZSaYiWFzryXQhLwzNHHKwVHFZE0We_7ZuoODXxn-zy2z1sIvT1h9Ittp7UioET"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary mb-stack-xs">Continental</h3>
+<p class="font-body-md text-on-surface-variant">Refined European techniques meeting locally sourced ingredients for a timeless palate.</p>
+</div>
+</div>
+<!-- Asian -->
+<div class="group flex flex-col space-y-stack-md translate-y-stack-lg">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Asian Cuisine" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Artisanal sushi platter with fresh tuna and salmon served on a dark slate tray with micro-greens and gold leaf accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPiLUFy6X9dpuR6jUGjQiwPQN7-PG6n68Q74H6LQXTfjC8he5Ws2skSUwPfzhLvBzZMPKEWV4rf5h07-5I4JngJP2b0Wjuoo-1fUwV5fltY72aJKkc1tvy4ieIrZjH-Db4Zt3eGOvK2D7GiHGedyW_tbnC9PP5JRz9AArFpKy_z1CJiiDYa6EjAeg3NlleYADHCxBNh0sCTHk-LGU8whXme670BjUm9czfO5dIbTlE-Af5lrVKjE6PVu7pxCA8Uq83q6PVQklrLlbs"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary mb-stack-xs">Pan-Asian</h3>
+<p class="font-body-md text-on-surface-variant">A delicate balance of spice and texture, featuring contemporary interpretations of eastern classics.</p>
+</div>
+</div>
+<!-- North Indian -->
+<div class="group flex flex-col space-y-stack-md">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="North Indian Cuisine" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Rich butter chicken in a traditional copper bowl garnished with fresh cream and cilantro, warm golden spice tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaEG3-M7GSd1huQbHkeaaTtGKzZazQm3mIthOiOPWqcOBPRJsX92lSxBW6lstbWQ9fVt_1MzkE3doHpZqkD20nL8DBJQAJMG3FX3Y4Zpnen0O5Qm7MDR5lhhaF8IHu_wMRTm2z2UUGuE8SJG9KTn38iZReHOxIAG3Jjw02gEIfPvclX0no4VU1M_G1Wzj4SWK7Ms22zA1XP092XMZ763tY7473_RspV4H0sW3A1S_IjUmzXPKKq8hWorD8sIrci5J1PIY-nYuccSPp"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary mb-stack-xs">North Indian</h3>
+<p class="font-body-md text-on-surface-variant">Soulful heritage recipes elevated through artisanal preparation and wood-fired mastery.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Cocktails (Asymmetric Layout) -->
+<section class="py-stack-xl soft-stone overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="flex flex-col lg:flex-row items-center gap-stack-xl">
+<div class="w-full lg:w-1/2 relative">
+<div class="border border-primary/20 p-stack-sm inline-block">
+<img alt="Cocktail Craft" class="w-full h-auto object-cover max-h-[600px]" data-alt="Macro shot of a signature cognac cocktail with a large clear ice cube and orange twist, backlit by soft amber light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEAksU3vIydi29w6KjvssfYBefagUKrRDQByfigrxpd6YrRxvxuKV1brsmhE1-O7M4o0j93hnLt1CbSQxPnju0CkTtVHTNrG-NdzzsVDh2vE1-RkRjqox9zipHtfHQY9qyCjdRnn_fJsnDZ1OIGGzUNJ-cmwW3og07Y1WOi0uv5A5d20gPrsz-USxKCPMlcd6XN8VF7DFsqn5kOzXNXWVcCLO_LobUKxTTiohsfVU2nDLCq11l5mPXXYvwi9P4q8adm_hOVka9KVaX"/>
+</div>
+<div class="absolute -bottom-10 -right-10 hidden md:block w-64 aspect-square bg-background p-stack-sm border border-outline-variant/30 shadow-lg">
+<img alt="Cocktail Detail" class="w-full h-full object-cover" data-alt="Close up of crystal glassware and gold bar tools on a dark marble surface with dramatic sepia lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDenyvXkEn2Wl3yz4HP5gyBFMZgvyIgSeMiI0Ult9f4kf6zsAXxYcQ0CvO4qkIq6uTpmcTGDSwzT1xRuaIsQ4zkYpHMJCivXz9UDeMJiGliEMC5gdIvFAek3GPs5FL3y0iCqRU0l8jQSI5aAuTPb19WllS7_EyfUsCPdOeVUMdKgU9FEJPI3K645fz-kdoUKBUiV7jspUKga9nmD1wXVXhQoOUwkbgBirvD6YBHdrQfkaZ0di1GBE9jV306pvgip3VCTpQJZOoBDQjL"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2 space-y-stack-md">
+<span class="font-label-caps text-primary tracking-[0.3em] uppercase">The Alchemist Bar</span>
+<h2 class="font-h2 text-h2 text-on-background">Liquid Gold &amp; Heritage Spirits</h2>
+<p class="font-body-lg text-on-surface-variant">Our mixologists blend traditional botanicals with modern infusion techniques. Each drink is a narrative of spice, citrus, and smoke.</p>
+<div class="space-y-stack-sm pt-stack-md">
+<div class="flex justify-between items-end border-b border-secondary/20 pb-stack-xs">
+<span class="font-h3 text-lg text-primary">Saffron Old Fashioned</span>
+<span class="font-body-md text-primary">$18</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic">Kashmiri Saffron, Bourbon, Hand-carved Ice</p>
+<div class="flex justify-between items-end border-b border-secondary/20 pb-stack-xs mt-stack-md">
+<span class="font-h3 text-lg text-primary">Hibiscus Rooftop Fizz</span>
+<span class="font-body-md text-primary">$16</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic">Wild Hibiscus, Gin, Elderflower, Effervescence</p>
+</div>
+<button class="mt-stack-lg border-b border-primary text-primary font-label-caps pb-2 hover:opacity-70 transition-all">
+                        Full Drinks Menu
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Rooftop Vibe (Bento Grid Style) -->
+<section class="py-stack-xl bg-background">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="text-center mb-stack-xl">
+<span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-stack-xs">Atmosphere</span>
+<h2 class="font-h2 text-h2 text-on-background">The Rooftop Vibe</h2>
+</div>
+<div class="grid grid-cols-12 grid-rows-2 gap-4 h-[800px]">
+<div class="col-span-12 md:col-span-8 row-span-1 overflow-hidden group">
+<img alt="Rooftop Night" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Wide shot of a crowded elegant rooftop bar at night with fairy lights, soft ambient glowing lamps, and stylish people" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0UVSYLrAk325RZHlL4FzAYaJV-sBv211-j678Y0oZawIIiEzQCjJRMkIwn4DbIkoP3JxD07nBL3ZBcC5KJwxeigqcaT9iJTyO5fV7tX4CM2zJ7tzicjcgMgo04dTlJhgpmg6WhwLyQ7CGuSm4QXCyeYy_ajseYG7hAR69wt9txfqQLM_pXWMhaFPfT4jK-rmJZXn_c_mX0BIjsQ29QPJt_W625VWZLvd_SG1ZnBCr2ohtskuw1LMefSqBRVLFIWf3Nl9ZxITWVIPZ"/>
+</div>
+<div class="col-span-6 md:col-span-4 row-span-1 overflow-hidden group">
+<img alt="Cafe Detail" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Elegant outdoor seating with cream cushions and cognac leather accents under a canopy of green plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKCwPPHyXNgH6xJovtUGRNOJfZfq6o7GFeim52CVyt7Bo0mhigwvj99GLpYHqD0apMeWz1yYa4VcM_vhWpUcno35ULKda7YCnuGP116lpWg9qGPu8PWKjHGh7PrnttnVK8jLhbvcM1STNErSEwMS9gsDj4cKe-oAWUkdAM2ZrVaoVNeQAGX7MDm7VW48KsK3wJHHbE2NWXPdMxAlkvY2Rol2nJ-nVxQAWyZz7IpXl6SMtVNl1T03NlawMY8lZrY1GRt7ZsjJ221ok8"/>
+</div>
+<div class="col-span-6 md:col-span-4 row-span-1 overflow-hidden group">
+<img alt="Fine Dining" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Close up of a candlelit table with fine crystal wine glasses and a single white rose in a small vase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLoexcqo1MdVKP5O6_WyL7i5GPGL_bMm109wAH0v-a1tOZtXsm9-vIZKuLZF7mP7W2FDw235n8yES7Bu2dPnbNSxI0Wbc98VilCXoZz8gXVfT8yTPfY02YmCiGZUOqGg5uX2Y0r4JuP1kOwe4yTsA-SBFQjFDdzSWuPzCwrxtd-4loMGs7Ac9u-acJCkvQpLZCwyX2TKsB3NijzID7f9-jPmjdsbwYQA3_f4xARtNpw88chU2om09EWi5TEe_xPvREX0kG5uKxJzFo"/>
+</div>
+<div class="col-span-12 md:col-span-8 row-span-1 overflow-hidden group">
+<img alt="Kitchen Energy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Dramatic blurred shot of a professional chef plating food in a high-end restaurant kitchen with warm spotlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL0Aab4S_u6qmRySDFal58sFY3QqQNy5Di_XmNpRh7PSRbafOtZ398JbLXemjs7Ul7WqQccF5TeRBbchYurgJG1bntPoMUjvs1yR89o6sLon3voWdY6O9qfp-bTCkoPxwEMeELEYqhQcoLCaq941NFvKvhPLBgxZWPIiST6mprwQR0XQJGlycLb1Hykb0Vmc7N5iB37HbQtWrCJ0CtQIoGmP7dGHQD66GdPs1oNrph9cUqY7vKA4iSB-Cso4Za3JXZ20IA8d-h_Wlu"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-stack-xl soft-stone">
+<div class="max-w-4xl mx-auto px-margin text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="space-y-stack-lg">
+<div>
+<p class="font-h3 text-h3 text-on-background italic mb-stack-md">"An ethereal experience. The sunset views are only matched by the precision of the kitchen. A true sanctuary in the heart of the city."</p>
+<cite class="font-label-caps text-primary not-italic tracking-widest">— Julianne Sterling, Gastronomy Today</cite>
+</div>
+</div>
+<div class="flex justify-center mt-stack-xl gap-4">
+<button class="w-3 h-3 rounded-full bg-primary"></button>
+<button class="w-3 h-3 rounded-full bg-outline-variant"></button>
+<button class="w-3 h-3 rounded-full bg-outline-variant"></button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-300 bg-stone-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-20 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="col-span-1">
+<div class="text-xl font-serif text-stone-900 mb-stack-md">Babylonia</div>
+<p class="font-serif text-base font-light text-stone-600">Elevated heritage atop the city. Where ancient inspiration meets contemporary luxury.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-serif text-stone-900 mb-stack-md font-bold">Discover</h4>
+<ul class="space-y-2">
+<li><a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400 transition-all" href="#">Location</a></li>
+<li><a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400 transition-all" href="#">Hours</a></li>
+<li><a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400 transition-all" href="#">Menu</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-serif text-stone-900 mb-stack-md font-bold">Social</h4>
+<ul class="space-y-2">
+<li><a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400 transition-all" href="#">Instagram</a></li>
+<li><a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400 transition-all" href="#">Facebook</a></li>
+<li><a class="font-serif text-base font-light text-stone-600 hover:text-stone-900 underline decoration-stone-400 transition-all" href="#">Member Login</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-serif text-stone-900 mb-stack-md font-bold">Contact</h4>
+<p class="font-serif text-base font-light text-stone-600">reservations@babylonia.com</p>
+<p class="font-serif text-base font-light text-stone-600">+1 (555) 012-3456</p>
+<div class="mt-stack-md border-t border-stone-300 pt-stack-sm text-stone-500 text-sm">
+                    © 2024 Babylonia Rooftop. All rights reserved.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
