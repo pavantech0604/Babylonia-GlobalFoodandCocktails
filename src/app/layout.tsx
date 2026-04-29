@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: "Babylonia | Global Food and Rooftop Lounge",
   description: "Experience the elevated heritage of global food and cocktails at Babylonia.",
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
